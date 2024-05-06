@@ -1,0 +1,377 @@
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('./img/pokeball.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+html{
+    scroll-behavior: smooth;
+    scrollbar-color: #ef2020 rgb(39, 33, 52);
+    scrollbar-width: thin;
+}
+
+header{
+    min-height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 4px 6px -2px rgba(0,0,0,0.95);
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+
+.header-img{
+    height: 80px;
+}
+
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+h1{
+    color: #FFCC12;
+    font-size: 56px;
+    text-shadow: #2871B8 8px 8px 5px;
+}
+
+#input{
+    width: 200px;
+    height: 35px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 2px solid rgb(40, 113, 184);
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+#input:hover{
+    box-shadow: 0px 0px 2px 2px rgba(224, 39, 202, 0.8);
+}
+
+.pokedex-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
+    width: 250px;
+    border-radius: 40px;
+}
+
+.pokedex-wrapper:hover{
+    cursor: pointer;
+    box-shadow: 8px 8px 18px 8px rgba(47, 28, 155, 0.7);
+}
+
+.pokedex-wrapper:hover #pokemonImage{
+    width: 230px;
+}
+
+#pokedex{
+    height: 240px;
+    width: 250px;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-container{
+    background-color: white;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    height: 110px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pokemonImage{
+    width: 180px;
+    transition: width 0.5s ease;
+    margin-top: -10px;
+}
+
+#pokemonName{
+    color: rgb(62, 62, 62);
+    font-size: 26px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
+
+.species-id{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+    color: rgb(62, 62, 62);
+    font-weight: 700;
+}
+
+.species{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.species div{
+    margin: 0 2.5px;
+}
+
+#pokemonList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#btn{
+    color: rgb(62, 62, 62);;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #2871B8;
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 280px;
+    margin: 40px;
+}
+
+#btn:hover{
+    box-shadow: 0px 0px 5px 5px rgba(224, 39, 202, 0.8);
+    cursor: pointer;
+}
+
+#pokemonSpecies1, #pokemonSpecies2{
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.d-none{
+    display: none !important;
+}
+
+.no-result-div {
+    margin-top: 50px;
+    color: #FFCC12;
+    font-size: 25px;
+    text-shadow: #2871B8 3px 3px 3px;
+    text-align: center;
+}
+
+.card-header{
+    width: 400px;
+    height: 350px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.card-content{
+    background-color: white;
+    width: 400px;
+    height: 400px;
+    border-radius: 40px;
+    margin-top: -40px;
+}
+
+.card-big-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-big-wrapper:hover{
+    cursor: default;
+}
+
+.pokemon-name{
+    color: rgb(62, 62, 62);
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
+
+.pokemon-image-big{
+    width: 270px;
+    margin-top: -40px;
+}
+
+.pokemon-species{
+    border: 1px solid rgb(62, 62, 62);
+    border-radius: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.hide-scrollbar{
+    overflow-y: hidden;
+}
+
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(65, 65, 65, 0.9);
+}
+
+.popup:hover{
+    cursor: pointer;
+}
+
+.center-element{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-table{
+    display: flex;
+    justify-content: center;
+}
+
+.first-td{
+    width: 150px;
+}
+
+.pd-top-20{
+    padding-top: 20px;
+}
+
+tr{
+    display: flex;
+}
+
+h3{
+    color: rgb(62, 62, 62);
+    font-size: 20px;
+}
+
+.headlines{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 35px;
+    align-items: center;
+}
+
+.headline1:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: rgb(62, 62, 62);
+}
+
+.headline2:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: rgb(62, 62, 62);
+}
+
+#myChart{
+    display: block;
+    box-sizing: border-box;
+    height: 250px;
+    width: 350px;
+}
+
+.arrow-left, .arrow-right{
+    height: 20px;
+    width: 20px;
+}
+
+.arrow-right{
+    transform: rotate(180deg);
+}
+
+.arrow-left, .arrow-right:hover{
+    cursor: pointer;
+}
+
+.opacity-0{
+    opacity: 0;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-bottom: 10px;
+    border: 2px solid #2871B8;
+    border-radius: 10px;
+    padding: 7px;
+}
+
+.button{
+    color: rgb(62, 62, 62);
+    font-size: 16px;
+    border-radius: 10px;
+    border: 2px solid #2871B8;
+    background-color: rgba(255, 255, 255, 0.6);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 2px 2px rgba(224, 39, 202, 0.8);
+}
+
+.search:hover{
+    box-shadow: 0px 0px 5px 5px rgba(234, 22, 72, 0.8);
+}
+
+@media (max-width: 510px){
+    .header-img{
+        height: 60px;
+    }
+
+    h1{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 450px){
+    .card-header{
+        width: 300px;
+    }
+
+    .card-content{
+        width: 300px;
+    }
+
+    #input{
+        width: 150px;
+        font-size: 14px;
+    }
+
+    .button{
+        font-size: 14px;
+    }
+}

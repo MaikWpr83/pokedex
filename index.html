@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicon - Tab -->
+    <link rel="icon" type="image/x-icon" href="./img/pikachu.png">
+
+    <!-- CSS einbinden -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Script-Dateien einbinden -->
+    <script src="scripts/script.js"></script>
+    <script src="scripts/backgroundcolor.js"></script>
+    <script src="scripts/chart.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <title>Pokédex</title>
+</head>
+
+<body onload="rendern()">
+
+    <header>
+        <div class="header-content">
+            <a href="index.html">
+                <img src="./img/pokeball_header.png" class="header-img">
+            </a>
+
+            <div>
+                <h1>Pokédex App</h1>
+            </div>
+        </div>
+
+        <div class="search">
+            <input id="input" type="text" placeholder="Enter Pokémon-name...">
+            <button class="button" id="searchButton" onclick="searchPokemonBigCard()">Search</button>
+            <button class="button" id="deleteSearchbar" onclick="deleteSearchbar()">X</button>
+        </div>
+    </header>
+
+    <div id="pokemonList"></div>
+
+    <button id="btn" onclick="loadMorePokemon()">load more Pokémon</button>
+
+    <div id="backgroundCard" class="d-none popup" onclick="closeBigPokemonCard(event)"></div>
+</body>
+
+</html>
